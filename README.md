@@ -31,6 +31,6 @@ Also the entire project is uploaded in Novypro.com for public use.
 Link: https://www.novypro.com/project/abpattanaik96novyprocom
 
 
-YouTube Video: 
+YouTube Video: https://youtu.be/S_LP6kHoNvk
 
 LinkedIn Post: https://www.linkedin.com/posts/abhijeet-sethy-058272143_github-gemini-abhibank-campaign-analytics-activity-7019332864768954368-mioD?utm_source=share&utm_medium=member_desktop
