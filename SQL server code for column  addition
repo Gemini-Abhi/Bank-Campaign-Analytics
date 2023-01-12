@@ -1,0 +1,49 @@
+--creating a finanacial condition column
+
+alter table bank_cleaned
+add Financial_category varchar(max);
+
+
+--updating the added column value 
+
+update bank_cleaned
+set Financial_category = (case
+ when balance <=0 then 'Financially_unstable'
+ when balance >0 and balance <= 70 then 'Very_poor'
+ when balance >70 and balance < 450 then 'poor'
+ when balance >= 450 and balance< 1335 then 'Middle_standard'
+ when balance >= 1335 and balance< 4860 then 'Upper_Middle_standard'
+ when balance >= 4860 and balance<=10500 then 'Financially_stable'
+
+else null
+end)
+
+
+--creating a age_category column
+alter table bank_cleaned
+add Age_category varchar(max);
+
+--updating the added column value 
+update bank_cleaned
+set age_category = (case when age >0 and age <= 30 then 'Young'
+ when age >30 and age <=50 then 'Middle_age'
+ when age >50 then 'Senior'
+else null
+end)
+
+--creating a call duration column
+
+alter table bank_cleaned
+add call_Duration varchar(max);
+
+--updating the added column 'call duration' value 
+
+update bank_cleaned
+set call_Duration = (case
+ when duration <=1 then '<=1 min'
+ when 1< duration and  duration <=3 then '1-3 min'
+ when 3< duration and  duration <=10 then '3-10 mins'
+ when 10< duration  then '>10 mins'
+ 
+else null
+end)
